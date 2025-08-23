@@ -51,9 +51,9 @@ export async function deleteTransaction(req,res) {
 
     if(transactions.length === 0)
     {
-      res.status(404).json({message: "Transaction not found"})
+      return res.status(404).json({message: "Transaction not found"})
     }
-    res.status(201).json({message:"Transaction deleted Successfully!"})
+    return res.status(200).json({message:"Transaction deleted Successfully!"})
   }
   catch(error)
   {
